@@ -3,7 +3,7 @@
    cache-first for icons/manifest. Bump CACHE when the shell changes. */
 'use strict';
 
-const CACHE = 'notis-shell-v1';
+const CACHE = 'notis-shell-v2';
 const SHELL = [
   './',
   './index.html',

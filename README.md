@@ -57,6 +57,26 @@ build step and no dependencies — GitHub serves the files as-is (thanks to `.no
 
 The local preview runs `npm start` (`server.mjs`) and needs nothing installed.
 
+## Look & feel
+
+Notis is deliberately quiet: a near-neutral bone canvas, ink type, hairline borders and
+one deep spruce accent. Colour is used for meaning (selection, active state, reminders),
+never for decoration. The eleven note tints are low-chroma "paper stock" rather than
+bright pastels, so a wall of notes reads as a stack of paper instead of a party.
+
+Both themes are driven by CSS custom properties at the top of `index.html`:
+
+| Token | Light | Dark | Used for |
+| --- | --- | --- | --- |
+| `--bg` | `#F4F4F2` | `#0E1012` | canvas |
+| `--surface` | `#FFFFFF` | `#171A1E` | cards, sheets, bars |
+| `--text` / `--muted` | `#17191C` / `#6E747D` | `#E8EAEC` / `#939AA4` | type |
+| `--border` / `--hairline` | `#E4E5E1` | `#262B31` | 1px separators |
+| `--accent` | `#166A5B` | `#7ECFB9` | the only real colour |
+| `--sh-1/2/3`, `--edge` | layered | layered | elevation, top highlight |
+
+To re-skin the app, edit those tokens — every component inherits from them.
+
 ## Data & privacy
 
 Notes, lists, drawings, images and voice memos live in the browser's IndexedDB
