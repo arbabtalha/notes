@@ -46,8 +46,16 @@ disk still works too.
 
 ## Deploying
 
-GitHub Pages is configured to publish the **default branch (`main`) at `/`**.
-Push to `main` and the site rebuilds automatically — no build step, no dependencies.
+GitHub Pages currently publishes the branch **`arbabtalha-patch-2`** at `/`.
+That works, but the default branch is `main`, so the recommended setup is:
+
+> **Settings → Pages → Build and deployment → Source: Deploy from a branch →
+> Branch: `main` / `(root)` → Save.**
+
+After that, every push to `main` rebuilds the site (about a minute). There is no
+build step and no dependencies — GitHub serves the files as-is (thanks to `.nojekyll`).
+
+The local preview runs `npm start` (`server.mjs`) and needs nothing installed.
 
 ## Data & privacy
 
